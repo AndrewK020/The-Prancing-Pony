@@ -18,13 +18,5 @@ module.exports = function(sequelize, DataTypes) {
     phone: DataTypes.STRING
   });
 
-  // Guest.associate = function(models) {
-  //   Guest.belongsTo(models.Reservation, {
-  //     foreignKey: {
-  //       allowNull: true
-  //     },
-  //     targetKey: "id"
-  //   });
-  // };
   return Guest;
 };

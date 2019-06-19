@@ -6,12 +6,6 @@ module.exports = function(sequelize, DataTypes) {
 
   Room.associate = function(models) {
   
-  //   Room.belongsTo(models.Reservation, {
-  //     foreignKey: {
-  //       allowNull: true
-  //     },
-  //     targetKey: "id"
-  //   });
   };
   return Room;
 };
