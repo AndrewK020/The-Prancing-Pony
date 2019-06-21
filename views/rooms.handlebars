@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center" id="top-bar">
+			<h1> Available Rooms! </h1>
+		</div>
+		<div class="col-md-6 text-center" class="task">
+			<div class="row">
+			  {{#each available}}
+				<div class="col-md-9 text-center">
+					<pre>{{this.type}}
+					</pre>
+				  		<!-- {{this.Date}} -->
+				</div>
+			  {{/each}}
+			</div>
+		</div>
+<div class="col-md-6 text-center" class="task">
+			<div class="row">
+			  {{#each allrooms}}
+				<div class="col-md-9 text-center">
+					<pre>{{this.type}}
+					</pre>
+				  		<!-- {{this.Date}} -->
+				</div>
+			  {{/each}}
+			</div>
+		</div>
