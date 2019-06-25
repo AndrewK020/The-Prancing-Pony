@@ -19,7 +19,8 @@ module.exports = function(sequelize, DataTypes) {
         foreignKey: {
           allowNull: false
         },
-        targetKey: "id"
+        targetKey: "id",
+        onDelete: 'cascade'
       });
     
       Reservation.belongsTo(models.Room, {
@@ -27,7 +28,8 @@ module.exports = function(sequelize, DataTypes) {
         foreignKey: {
           allowNull: false
         },
-        targetKey: "id"
+        targetKey: "id",
+        onDelete: 'cascade'
       });
     };
   return Reservation;
