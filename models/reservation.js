@@ -19,7 +19,6 @@ module.exports = function(sequelize, DataTypes) {
         foreignKey: {
           allowNull: true
         },
-        as: 'guest',
         targetKey: "id",
         onDelete: 'cascade'
       });
@@ -29,7 +28,6 @@ module.exports = function(sequelize, DataTypes) {
         foreignKey: {
           allowNull: true
         },
-        as: 'reserved_room',
         targetKey: "id",
         onDelete: 'cascade'
       });
