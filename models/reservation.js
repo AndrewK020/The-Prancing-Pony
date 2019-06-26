@@ -14,19 +14,19 @@ module.exports = function(sequelize, DataTypes) {
   
     Reservation.associate = function(models) {
       
-      Reservation.belongsTo(models.Guest, {
+      Reservation.hasMany(models.Guest, {
         as: "Guest",
         foreignKey: {
-          allowNull: false
+          allowNull: true
         },
         targetKey: "id",
         onDelete: 'cascade'
       });
     
-      Reservation.belongsTo(models.Room, {
+      Reservation.hasMany(models.Room, {
         as: "Room",
         foreignKey: {
-          allowNull: false
+          allowNull: true
         },
         targetKey: "id",
         onDelete: 'cascade'

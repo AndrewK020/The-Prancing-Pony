@@ -20,4 +20,7 @@ VALUES   ('double',451,34.99, NOW(), NOW()),
          ('double',310,34.99, NOW(), NOW()),
          ('single',111,24.99, NOW(), NOW());
 
-INSERT INTO Reservations (checkInDate, checkOutDate, createdAt, updatedAt, GuestId, RoomId) VALUES (NOW(), NOW(),NOW(), NOW(), 1, 1);
+INSERT INTO Reservations (checkInDate, checkOutDate, createdAt, updatedAt) VALUES (NOW(), NOW(),NOW(), NOW());
+
+UPDATE Guests AS g, Rooms as r SET  g.ReservationId = 1, r.ReservationId = 1
+where r.id = 1 and g.id = 1;
