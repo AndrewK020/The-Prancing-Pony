@@ -15,11 +15,11 @@ module.exports = function(sequelize, DataTypes) {
     Reservation.associate = function(models) {
       
       Reservation.hasMany(models.Guest, {
-        as: "Guest",
+       // as: "Guest",
         foreignKey: {
           allowNull: true
         },
-        as: 'guest',
+       // as: 'guest',
         targetKey: "id",
         onDelete: 'cascade'
       });

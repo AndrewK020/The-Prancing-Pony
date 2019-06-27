@@ -36,8 +36,8 @@ app.get("/api/reservations/:id", function(req, res){
       id: req.params.id
     },
     include: [
-      { model: db.Room, as: 'reserved_room' },
-      { model: db.Guest, as: 'guest'}
+      { model: db.Room },
+      { model: db.Guest }
     ]
   }).then(function(data) {
     res.json(data);
