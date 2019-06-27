@@ -16,9 +16,9 @@ module.exports = function(sequelize, DataTypes) {
       
       Reservation.hasMany(models.Guest, {
        // as: "Guest",
-        foreignKey: {
-          allowNull: true
-        },
+        // foreignKey: {
+        //   allowNull: true
+        // },
        // as: 'guest',
         targetKey: "id",
         onDelete: 'cascade'
@@ -26,9 +26,9 @@ module.exports = function(sequelize, DataTypes) {
     
       Reservation.hasMany(models.Room, {
       //  as: "Room",
-        foreignKey: {
-          allowNull: true
-        },
+        // foreignKey: {
+        //   allowNull: true
+        // },
         targetKey: "id",
         onDelete: 'cascade'
       });
