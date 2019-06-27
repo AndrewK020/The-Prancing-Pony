@@ -19,7 +19,6 @@ module.exports = function(sequelize, DataTypes) {
         foreignKey: {
           allowNull: true
         },
-       as: 'guest',
         targetKey: "id",
         onDelete: 'cascade'
       });
