@@ -25,7 +25,7 @@ module.exports = function(sequelize, DataTypes) {
       });
     
       Reservation.hasMany(models.Room, {
-        as: "Room",
+      //  as: "Room",
         foreignKey: {
           allowNull: true
         },
