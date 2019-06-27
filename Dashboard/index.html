@@ -255,15 +255,15 @@
                     <option value="CO">CO</option>
                     <option value="CT">CT</option>
                     <option value="DE">DE</option>
-                    <option value="DC">District Of Columbia</option>
-                    <option value="FL">Florida</option>
-                    <option value="GA">Georgia</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="ID">Idaho</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="IA">Iowa</option>
-                    <option value="KS">Kansas</option>
+                    <option value="DC">DC</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="IA">IA</option>
+                    <option value="KS">Knos</option>
                     <option value="KY">Kentucky</option>
                     <option value="LA">Louisiana</option>
                     <option value="ME">Maine</option>
@@ -364,7 +364,8 @@
                 <thead>
                   <tr>
                     <th>Room Number</th>
-                    <th>Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Room Type</th>
                     <th>Room Rate</th>
                     <th>Arrival Date</th>
@@ -374,7 +375,8 @@
                 <tfoot>
                   <tr>
                     <th>Room Number</th>
-                    <th>Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Room Type</th>
                     <th>Room Rate</th>
                     <th>Arrival Date</th>
@@ -382,89 +384,22 @@
                   </tr>
                 </tfoot>
                 <tbody>
-                  <tr>
-                    <td>111</td>
-                    <td>Tony Stark</td>
-                    <td>Double</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
-                  <tr>
-                    <td>112</td>
-                    <td>Steve Rogers</td>
-                    <td>King</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
-                  <tr>
-                    <td>113</td>
-                    <td>Peter Parker</td>
-                    <td>Queen</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
-                  <tr>
-                    <td>114</td>
-                    <td>Scott Lang</td>
-                    <td>Double</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
-                  <tr>
-                    <td>115</td>
-                    <td>Stephen Strange</td>
-                    <td>Queen</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
-                  <tr>
-                    <td>201</td>
-                    <td>Bruce Banner</td>
-                    <td>King</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
-                  <tr>
-                    <td>202</td>
-                    <td>Clint Barton</td>
-                    <td>Double</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
-                  <tr>
-                    <td>203</td>
-                    <td>Sam Wilson</td>
-                    <td>Queen</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
-                  <tr>
-                    <td>204</td>
-                    <td>Thor Odinson</td>
-                    <td>King</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
-                  <tr>
-                    <td>205</td>
-                    <td>Peter Quill</td>
-                    <td>King</td>
-                    <td>$289</td>
-                    <td>07/04/19</td>
-                    <td>07/08/19</td>
-                  </tr>
+
 
                 </tbody>
               </table>
+              <script src="reservation.js"></script>
+              <script>
+                $(document).ready(function () {
+                  $.ajax({
+                    url: "data.json",
+                    dataType: "Json",
+                    success: function (data) {
+                      $(data.Reservation)each(function (index, value))
+                    }
+                  })
+                });
+              </script>
             </div>
           </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
