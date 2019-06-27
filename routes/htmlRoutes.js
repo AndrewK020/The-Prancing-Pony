@@ -26,7 +26,7 @@ module.exports = function(app) {
   });
 
   app.get("/dashboard", function(req, res) {
-    res.sendfile((path.join(__dirname, "../dashboard", "index.html")));
+    res.sendfile((path.join(__dirname, "../dashboard", "dashboard.html")));
   });
 
   app.get("*", function(req, res) {
