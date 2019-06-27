@@ -14,24 +14,24 @@ module.exports = function(sequelize, DataTypes) {
   
     Reservation.associate = function(models) {
       
-      Reservation.hasMany(models.Guest, {
-       // as: "Guest",
-        // foreignKey: {
-        //   allowNull: true
-        // },
-       // as: 'guest',
-        targetKey: "id",
-        onDelete: 'cascade'
-      });
+      // Reservation.hasMany(models.Guest, {
+      //  // as: "Guest",
+      //   // foreignKey: {
+      //   //   allowNull: true
+      //   // },
+      //  // as: 'guest',
+      //   targetKey: "id",
+      //   onDelete: 'cascade'
+      // });
     
-      Reservation.hasMany(models.Room, {
-      //  as: "Room",
-        // foreignKey: {
-        //   allowNull: true
-        // },
-        targetKey: "id",
-        onDelete: 'cascade'
-      });
+      // Reservation.hasMany(models.Room, {
+      // //  as: "Room",
+      //   // foreignKey: {
+      //   //   allowNull: true
+      //   // },
+      //   targetKey: "id",
+      //   onDelete: 'cascade'
+      // });
     };
   return Reservation;
 };
