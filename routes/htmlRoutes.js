@@ -25,6 +25,10 @@ module.exports = function(app) {
     res.sendfile((path.join(__dirname, "../public/html", "contact.html")));
   });
 
+  app.get("/dashboard", function(req, res) {
+    res.sendfile((path.join(__dirname, "../dashboard", "index.html")));
+  });
+
   app.get("*", function(req, res) {
     res.render("404");
   });
