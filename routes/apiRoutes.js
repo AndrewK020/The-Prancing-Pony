@@ -21,8 +21,23 @@ app.get("/api/rooms", function(req, res){
   });
 });
 
-app.get("/api/reservations", function(req, res){
-  db.Reservation.findAll({
+//get reservations
+  app.get("/api/reservations", function(req, res){
+    db.Reservation.findAll({
+    }).then(function(data) {
+      res.json(data);
+    });
+  });
+// get reservations by id with the guest and room
+app.get("/api/reservations/:id", function(req, res){
+  db.Reservation.findOne({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      { model: db.Room },
+      { model: db.Guest }
+    ]
   }).then(function(data) {
     res.json(data);
   });
